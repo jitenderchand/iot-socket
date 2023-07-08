@@ -1,25 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
+import { Header } from "common/components/Header.component";
+import { Box } from "@chakra-ui/react";
+import { DeviceLandingPage } from "modules/deviceInventory/page/landingPage";
+import AppLogo from "assets/images/socket-logo-transparent.png";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header>
+        <Box width="100px">
+          <img src={AppLogo} height="100%" width="100%" />
+        </Box>
+      </Header>
+      <DeviceLandingPage />
+    </>
   );
 }
 

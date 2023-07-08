@@ -22,19 +22,21 @@ export class SocketService extends EventEmitter {
     this._connection = new WebSocket(
       process.env.REACT_APP_SOCKET_BASE_URL as string
     );
+    console.log("this", this);
     this._connection.addEventListener("open", this._handleSocketConnection);
     this._connection.addEventListener("close", this._handleSocketDisconnection);
   }
 
-  private _handleSocketConnection() {
-    this._isConnected = true;
+  private _handleSocketConnection = () => {
+    //this._isConnected = true;
+    console.log(this);
     this.emit(SocketServiceEvents.CONNECTED, true);
-  }
+  };
 
-  private _handleSocketDisconnection() {
+  private _handleSocketDisconnection = () => {
     this._isConnected = false;
     this.emit(SocketServiceEvents.DISCONNECTED, true);
-  }
+  };
 
   get isConnected(): boolean {
     return this.isConnected;

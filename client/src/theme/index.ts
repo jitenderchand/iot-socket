@@ -1,4 +1,5 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, ThemeOverride } from "@chakra-ui/react";
+import sizes, { baseSizes } from "./sizes";
 import colors from "open-color";
 
 const fromOpenColorPaletteToThemeColorPalette = (
@@ -141,9 +142,26 @@ const themeColors = {
   },
 };
 
+const space: ThemeOverride["space"] = {
+  ...baseSizes,
+};
+
+space["2xs"] = space[1];
+space["xs"] = space[2];
+space["sm"] = space[3];
+space["md"] = space[4];
+space["lg"] = space[6];
+space["xl"] = space[8];
+space["2xl"] = space[10];
+space["3xl"] = space[12];
+space["4xl"] = space[16];
+space["5xl"] = space[20];
+space["6xl"] = space[24];
+
 const theme = extendTheme({
   initialColorMode: "system",
   useSystemColorMode: true,
+  space,
   fonts: {
     heading: `'IBM Plex Sans', sans-serif`,
     body: `'IBM Plex Sans', sans-serif`,
