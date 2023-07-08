@@ -19,7 +19,9 @@ export class SocketService extends EventEmitter {
   }
   private constructor() {
     super();
-    this._connection = new WebSocket("ws//localhost:5000");
+    this._connection = new WebSocket(
+      process.env.REACT_APP_SOCKET_BASE_URL as string
+    );
     this._connection.addEventListener("open", this._handleSocketConnection);
     this._connection.addEventListener("close", this._handleSocketDisconnection);
   }
