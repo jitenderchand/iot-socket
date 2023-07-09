@@ -29,6 +29,16 @@ From the `/server` directory in your terminal or IDE run the following command:
 npm install && npm start
 ```
 
+## Client App
+
+You are provided with a tiny backend server exposing Web Socket endpoint on <http://localhost:3000>.
+
+From the `/client` directory in your terminal or IDE run the following command:
+
+```bash
+npm install && npm start
+```
+
 ### API
 
 On the client connection event, the API will stream back to the current state of the application in the format:
