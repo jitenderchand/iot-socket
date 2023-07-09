@@ -2,7 +2,6 @@
 
 - You should aim to spend between 3 to 4 hours on the exercise
 - Return the solution or make it available to us upon completion
-- Please do not mention BeamTrail in your solution or repository name
 
 ## Minimum Technical Requirements
 
