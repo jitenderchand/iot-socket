@@ -3,5 +3,5 @@ export interface IDevice {
   name: string;
   connected: boolean;
   unit: string;
-  value: string;
+  value: string | null;
 }

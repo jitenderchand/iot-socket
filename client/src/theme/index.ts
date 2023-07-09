@@ -1,4 +1,5 @@
 import { extendTheme, ThemeOverride } from "@chakra-ui/react";
+import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 import sizes, { baseSizes } from "./sizes";
 import colors from "open-color";
 
@@ -171,6 +172,15 @@ const theme = extendTheme({
     ...themeColors,
     brand: fromOpenColorPaletteToThemeColorPalette(colors.red),
     gray: fromOpenColorPaletteToThemeColorPalette(colors.gray),
+  },
+  styles: {
+    global: (props: StyleFunctionProps) => {
+      return {
+        body: {
+          bg: props.theme.colors.gray["50"],
+        },
+      };
+    },
   },
 });
 
