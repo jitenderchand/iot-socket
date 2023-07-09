@@ -1,6 +1,6 @@
 import { Header } from "common/components/Header.component";
 import { Box } from "@chakra-ui/react";
-import { DeviceLandingPage } from "modules/deviceInventory/page/landingPage";
+import { DeviceLandingPage } from "modules/deviceInventory/page/LandingPage";
 import AppLogo from "assets/images/socket-logo-transparent.png";
 import "./App.css";
 

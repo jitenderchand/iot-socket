@@ -3,7 +3,7 @@ import { IDevice } from "modules/deviceInventory/models/device.model";
 
 export type DeviceListById = { [key: string]: IDevice };
 
-interface IDeviceListState {
+export interface IDeviceListState {
   byId: DeviceListById;
 }
 

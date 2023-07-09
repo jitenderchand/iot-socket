@@ -5,3 +5,9 @@ export interface IDevice {
   unit: string;
   value: string | null;
 }
+
+export enum FILTER_VALUES {
+  ALL = "all",
+  CONNECTED = "connected",
+  DISCONNECTED = "disconnected",
+}

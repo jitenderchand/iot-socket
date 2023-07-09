@@ -1,15 +1,15 @@
 # Instructions
 
-* You should aim to spend between 3 to 4 hours on the exercise
-* Return the solution or make it available to us upon completion
-* Please do not mention BeamTrail in your solution or repository name
+- You should aim to spend between 3 to 4 hours on the exercise
+- Return the solution or make it available to us upon completion
+- Please do not mention BeamTrail in your solution or repository name
 
 ## Minimum Technical Requirements
 
 The solution should as a minimum be defined using:
 
-* TypeScript
-* ReactJS
+- TypeScript
+- ReactJS
 
 ## Task
 
@@ -34,27 +34,33 @@ npm install && npm start
 On the client connection event, the API will stream back to the current state of the application in the format:
 
 ```typescript
-{ 
-    id: string; 
-    name: string; 
-    connected: boolean; 
-    unit: string; 
-    value: string 
-} 
+{
+  id: string;
+  name: string;
+  connected: boolean;
+  unit: string;
+  value: string;
+}
 ```
 
 The Web Socket endpoint accepts the following messages, where `id` is the sensor identifier:
 
 ```typescript
 // Connect Sensor
-{ command: "connect"; id: string }
+{
+  command: "connect";
+  id: string;
+}
 
 // Disconnect Sensor
-{ command: "disconnect"; id: string }
+{
+  command: "disconnect";
+  id: string;
+}
 ```
 
 ## Questions
 
-* What aspect of this exercise did you find most interesting?
-* What did you find most cumbersome to do?
-* How can we further improve the user experience?
+- What aspect of this exercise did you find most interesting?
+- What did you find most cumbersome to do?
+- How can we further improve the user experience?
